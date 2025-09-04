@@ -1,3 +1,11 @@
+# Python
+__pycache__/
+.venv/
+*.py[codz]
+*$py.class
+db.sqlite3
+*.log
+
 # Dependencies
 node_modules/
 npm-debug.log*

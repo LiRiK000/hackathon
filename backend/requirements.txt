@@ -1,0 +1,17 @@
+fastapi == 0.115.12
+aiohttp == 3.12.15
+pydantic == 2.11.3
+python-dotenv == 1.1.0
+SQLAlchemy == 2.0.40
+uvicorn == 0.34.2
+asyncpg == 0.30.0
+passlib[bcrypt] == 1.7.4
+bcrypt == 4.0.1
+python-jose[cryptography] == 3.4.0
+redis == 6.0.0
+slowapi == 0.1.9
+minio == 7.2.15
+aiofiles == 24.1.0
+python-multipart == 0.0.20
+aiosqlite == 0.21.0
+alembic == 1.16.5
