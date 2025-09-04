@@ -1,0 +1,7 @@
+import { lazy } from 'react'
+
+export const ForgotPasswordPage = lazy(() =>
+  import('./ForgotPasswordPage').then(module => ({
+    default: module.ForgotPasswordPage,
+  }))
+)
