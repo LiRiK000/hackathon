@@ -1,7 +1,10 @@
 import { Button } from 'antd'
+import { useNavigate } from 'react-router-dom'
 import styles from './HomePage.module.scss'
 
 export const HomePage = () => {
+  const navigate = useNavigate()
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -11,10 +14,12 @@ export const HomePage = () => {
           Built with React, TypeScript, and Ant Design.
         </p>
         <div className={styles.buttonGroup}>
-          <Button type='primary' size='large'>
-            Get Started
+          <Button type='primary' size='large' onClick={() => navigate('/auth')}>
+            Войти
           </Button>
-          <Button size='large'>Learn More</Button>
+          <Button size='large' onClick={() => navigate('/register')}>
+            Регистрация
+          </Button>
         </div>
       </div>
     </div>
