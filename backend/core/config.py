@@ -100,7 +100,7 @@ MINIO_CONFIG = MinIOConfig(
 
 
 # Конфигурация uvicorn
-ADMIN_SERVER_PORT = int(getenv("ADMIN_SERVER_PORT") or 8001)
+SERVER_PORT = int(getenv("SERVER_PORT") or 8001)
 
 
 # Конфигурация криптографии

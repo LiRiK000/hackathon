@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:
-    from config.fast_api import FastAPIConfig
+    from config.fastapi import FastAPIConfig
 
 
 class FastAPIHelper:
