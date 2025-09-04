@@ -1,0 +1,49 @@
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/mixins' as *;
+
+.container {
+  @include flex-center;
+  min-height: 100vh;
+  padding: $spacing-md;
+}
+
+.content {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+}
+
+.errorCode {
+  font-size: 6rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: $spacing-md;
+  line-height: 1;
+
+  @include mobile {
+    font-size: 4rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: $spacing-md;
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  color: $text-color-secondary;
+  margin-bottom: $spacing-xl;
+  line-height: 1.6;
+}
+
+.homeButton {
+  min-width: 120px;
+}
