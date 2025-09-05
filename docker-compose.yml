@@ -14,7 +14,7 @@ services:
       - NODE_ENV=development
       - VITE_API_URL=http://localhost:4000
     profiles:
-      - frontend
+      - only_front
       - front
       - full
     depends_on:
@@ -38,7 +38,7 @@ services:
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
-      - DB_NAME=${POSTGRES_DB}
+      - DB_NAME=${DB_NAME}
       - REDIS_HOST=${REDIS_HOST}
       - REDIS_PASSWORD=${REDIS_PASSWORD}
       - MINIO_HOST=${MINIO_HOST}
@@ -58,6 +58,8 @@ services:
         condition: service_healthy
       postgres:
         condition: service_healthy
+    networks:
+      - app-network
 
   postgres:
     image: postgres:bullseye
@@ -77,6 +79,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - app-network
 
   redis:
     image: redis:bookworm
@@ -93,6 +97,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - app-network
 
   minio:
     image: minio/minio:RELEASE.2025-07-23T15-54-02Z-cpuv1
@@ -118,6 +124,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - app-network
 
   nginx:
     image: nginx:alpine
